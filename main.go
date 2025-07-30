@@ -84,6 +84,7 @@ func main() {
 			if err != nil {
 				status = StatusFailed
 			}
+			log.Printf("update ad %s creative %s %s", record[colADIDIndex], record[colCreativeIDIndex], status)
 			outputs[i] = []string{record[colADIDIndex], record[colCreativeIDIndex], status, fmt.Sprintf("%d", a)}
 		}()
 	}
